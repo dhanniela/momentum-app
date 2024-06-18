@@ -1,0 +1,85 @@
+ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: .6vw 2.2vw .6vw 3vw;
+    list-style-type: none;
+    font-size: 1vw;
+    transition: 0.2s;  
+    color: #fff;
+    word-wrap: break-word;
+  }
+  
+  ul li.checked {
+    color: #888;
+    text-decoration: line-through;
+  }
+  
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #888;
+    border-style: solid;
+    border-width: 0 .2vw .2vw 0;
+    top: .5vw;
+    left: 1.5vw;
+    transform: rotate(45deg);
+    height: .8vw;
+    width: .3vw;
+  }
+  
+  .delete{
+    position: absolute;
+    right: .5vw;
+    top: .4vw;
+    padding: .2vw .5vw .2vw .5vw;
+  }
+  
+  .delete:hover {
+    background-color: #888;
+    color: #fff;
+    border-radius: 2vw;
+  }
+  
+  .todo {
+    padding: 1vw;
+    color: white;
+    text-align: center;
+  }
+  
+  #todoInput {
+    border: none;
+    border-radius: 0;
+    font-size: 1vw;
+    background: none;
+    outline: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 600px) {
+    ul li {
+      font-size: 3vw;
+    }
+    
+    ul li.checked::before {
+      top: 1vw;
+      left: 3vw;
+      transform: rotate(45deg);
+      height: 1.6vw;
+      width: .6vw;
+    }
+    
+    .delete{
+      right: 1vw;
+      top: .8vw;
+    }
+    
+    #todoInput {
+      font-size: 3vw;
+    }
+  }

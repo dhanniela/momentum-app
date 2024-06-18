@@ -1,0 +1,330 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 30vw;
+  left: 80vw;
+  width: 18vw;
+  height: 15vw;
+  overflow-y: visible;
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 1vw;
+}
+
+.modal-content {
+  width: 18vw;
+  height: 15vw;
+}
+
+#todoBtn {
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: San Francisco Regular;
+  font-size: 1vw;
+  padding: 0 2vw 0 0;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .modal {
+    top: 110vw;
+    left: 25vw;
+    width: 50vw;
+    height: 25vw;
+  }
+  .modal-content {
+    width: 50vw;
+    height: 25vw;
+  }
+  #todoBtn {
+    font-size: 2vw;
+    margin-top: 10vw;
+  }
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 0.6vw 2.2vw 0.6vw 3vw;
+  list-style-type: none;
+  font-size: 1vw;
+  transition: 0.2s;
+  color: #fff;
+  word-wrap: break-word;
+}
+
+ul li.checked {
+  color: #888;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #888;
+  border-style: solid;
+  border-width: 0 0.2vw 0.2vw 0;
+  top: 0.5vw;
+  left: 1.5vw;
+  transform: rotate(45deg);
+  height: 0.8vw;
+  width: 0.3vw;
+}
+
+.delete {
+  position: absolute;
+  right: 0.5vw;
+  top: 0.4vw;
+  padding: 0.2vw 0.5vw 0.2vw 0.5vw;
+}
+
+.delete:hover {
+  background-color: #888;
+  color: #fff;
+  border-radius: 2vw;
+}
+
+.todo {
+  padding: 1vw;
+  color: white;
+  text-align: center;
+}
+
+#todoInput {
+  border: none;
+  border-radius: 0;
+  font-size: 1vw;
+  background: none;
+  outline: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  ul li {
+    font-size: 3vw;
+  }
+  ul li.checked::before {
+    top: 1vw;
+    left: 3vw;
+    transform: rotate(45deg);
+    height: 1.6vw;
+    width: 0.6vw;
+  }
+  .delete {
+    right: 1vw;
+    top: 0.8vw;
+  }
+  #todoInput {
+    font-size: 3vw;
+  }
+}
+@font-face {
+  font-family: San Francisco Regular;
+  src: url(fonts/SFUIText-Regular.otf);
+}
+@font-face {
+  font-family: San Francisco Light;
+  src: url(fonts/SFUIText-Light.otf);
+}
+body {
+  margin: 0;
+  height: 100vh;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: none;
+}
+
+.main {
+  margin-top: 14vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  font-family: San Francisco Regular;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 4vw;
+  margin-top: 2vw;
+}
+
+.space {
+  width: 5vw;
+}
+
+.quote-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30vw;
+}
+.quote-container #editInput {
+  width: 30vw;
+  font-size: 1vw;
+  padding: 0;
+  font-family: San Francisco Light;
+  margin: 1vw 0;
+  text-align: center;
+  background: none;
+  border-style: none;
+  outline: none;
+}
+.quote-container #quote {
+  width: 30vw;
+  font-size: 1vw;
+  padding: 0;
+  font-family: San Francisco Light;
+  margin: 1vw 0;
+}
+
+.greetingContainer {
+  display: flex;
+  font-size: 3vw;
+  font-family: San Francisco Light;
+  margin: 0;
+}
+.greetingContainer #editInput {
+  width: 10vw;
+  font-size: 3vw;
+  padding: 0 0 0 1vw;
+  font-family: San Francisco Light;
+  background: none;
+  border-style: none;
+  outline: none;
+  background: none;
+}
+.greetingContainer #name {
+  padding: 0 0 0 1vw;
+}
+
+.focusContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+  margin: 5vw 0 0;
+  font-family: San Francisco Light;
+  font-size: 1.9vw;
+}
+.focusContainer #editInput {
+  max-height: 2vw;
+  width: 30vw;
+  background: 0;
+  border: 0;
+  border-bottom: 0.2vw solid white;
+  outline: none;
+  text-align: center;
+  padding: 0.5vw;
+  font-size: 1.9vw;
+  background: none;
+}
+.focusContainer #focus {
+  width: 30vw;
+  max-height: 2vw;
+  background: 0;
+  border: 0;
+  border-bottom: 0.2vw solid;
+  outline: none;
+  text-align: center;
+  padding: 0.5vw;
+  font-size: 1.9vw;
+  word-wrap: break-word;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+#date {
+  font-size: 2vw;
+}
+
+#time {
+  font-size: 10vw;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .main {
+    margin-top: 28vw;
+  }
+  .footer {
+    margin-top: 15vw;
+    flex-direction: column;
+  }
+  .quote-container {
+    width: 80vw;
+    max-height: 20vh;
+  }
+  .quote-container #editInput {
+    max-height: 20vh;
+    font-size: 3vw;
+    margin: 2vw 0;
+  }
+  .quote-container #quote {
+    max-height: 20vh;
+    width: 80vw;
+    font-size: 3vw;
+    margin: 2vw 0;
+  }
+  .greetingContainer {
+    font-size: 6vw;
+  }
+  .greetingContainer #editInput {
+    font-size: 6vw;
+  }
+  .focusContainer {
+    width: 80vw;
+    margin: 30vw 0 0 0;
+    font-family: San Francisco Light;
+    font-size: 4vw;
+    text-align: center;
+  }
+  .focusContainer #editInput {
+    width: 60vw;
+    max-height: 4vw;
+    border-bottom: 0.4vw solid white;
+    font-size: 4vw;
+  }
+  .focusContainer #focus {
+    width: 60vw;
+    max-height: 4vw;
+    border-bottom: 0.4vw solid;
+    font-size: 4vw;
+  }
+  #time {
+    font-size: 20vw;
+    font-weight: bold;
+  }
+  #date {
+    font-size: 4vw;
+  }
+}/*# sourceMappingURL=style.css.map */

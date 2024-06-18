@@ -1,0 +1,48 @@
+.modal {
+    display: none; 
+    position: fixed;
+    top: 30vw;
+    left: 80vw;
+    width: 18vw;
+    height: 15vw;
+    overflow-y: visible;
+    overflow-x: hidden;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 1vw;
+  }
+  
+  .modal-content {
+    width: 18vw;
+    height: 15vw;
+  }
+  
+  #todoBtn{
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: San Francisco Regular;
+    font-size: 1vw;
+    padding: 0 2vw 0 0;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 600px) {
+    .modal {
+      top: 110vw;
+      left: 25vw;
+      width: 50vw;
+      height: 25vw;
+    }
+    
+    .modal-content {
+      width: 50vw;
+      height: 25vw;
+    }
+    
+    #todoBtn{
+      font-size: 2vw;
+      margin-top: 10vw;
+    }
+  }

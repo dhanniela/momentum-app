@@ -1,0 +1,214 @@
+@import 'modal', 'todo';
+
+@font-face{
+  font-family: San Francisco Regular;
+  src: url(fonts/SFUIText-Regular.otf);
+}
+
+@font-face{
+  font-family: San Francisco Light;
+  src: url(fonts/SFUIText-Light.otf);
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: none;
+}
+
+
+.main{
+  margin-top: 14vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  font-family: San Francisco Regular;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  width: 100vw;
+  height: 4vw;
+  margin-top: 2vw;
+}
+
+.space{
+  width: 5vw;
+}
+
+.quote-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30vw;
+  #editInput{
+    width: 30vw;
+    font-size: 1vw;
+    padding: 0;
+    font-family: San Francisco Light;
+    margin: 1vw 0;
+    text-align: center;
+    background: none;
+    border-style: none;
+    outline: none;
+  }
+  #quote{
+    width: 30vw;
+    font-size: 1vw;
+    padding: 0;
+    font-family: San Francisco Light;
+    margin: 1vw 0;
+  }
+}
+
+.greetingContainer{
+  display: flex;
+  font-size: 3vw;
+  font-family: San Francisco Light;
+  margin: 0;
+  #editInput{
+    width: 10vw;
+    font-size: 3vw;
+    padding: 0 0 0 1vw;
+    font-family: San Francisco Light;
+    background: none;
+    border-style: none;
+    outline: none;
+    background: none;
+  }
+  #name{
+    padding: 0 0 0 1vw;
+  }
+}
+
+.focusContainer{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+  margin: 5vw 0 0;
+  font-family: San Francisco Light;
+  font-size: 1.9vw;
+   #editInput{
+    max-height: 2vw;
+    width: 30vw;
+    background: 0;
+    border: 0;
+    border-bottom: .2vw solid white;
+    outline: none;
+    text-align: center;
+    padding: .5vw;
+    font-size: 1.9vw;
+    background: none;
+  }
+  #focus{
+    width: 30vw;
+    max-height: 2vw;
+    background: 0;
+    border: 0;
+    border-bottom: .2vw solid;
+    outline: none;
+    text-align: center;
+    padding: .5vw;
+    font-size: 1.9vw;
+    word-wrap: break-word;
+    overflow-y: visible;
+    overflow-x: hidden;
+  }
+}
+
+#date{
+  font-size: 2vw;
+}
+
+#time{
+  font-size: 10vw;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {  
+  .main{
+    margin-top: 28vw;
+  }
+  
+  .footer{
+    margin-top: 15vw;
+    flex-direction: column;
+  }
+  
+    
+  .quote-container{
+    width: 80vw;
+    max-height: 20vh;
+    #editInput{
+      max-height: 20vh;
+      font-size: 3vw;
+      margin: 2vw 0;
+    }
+    #quote{
+      max-height: 20vh;
+      width: 80vw;
+      font-size: 3vw;
+      margin: 2vw 0;
+    }
+  }
+  
+  .greetingContainer{
+    font-size: 6vw;
+    #editInput{
+      font-size: 6vw;
+    }
+  }
+  
+  .focusContainer{
+    width: 80vw;
+    margin: 30vw 0 0 0;
+    font-family: San Francisco Light;
+    font-size: 4vw;
+    text-align: center;
+     #editInput{
+      width: 60vw;
+      max-height: 4vw;
+      border-bottom: .4vw solid white;
+      font-size: 4vw;
+    }
+    #focus{
+      width: 60vw;
+      max-height: 4vw;
+      border-bottom: .4vw solid;
+      font-size: 4vw;
+    }
+  }
+    
+  #time{
+      font-size: 20vw;
+      font-weight: bold;
+  }
+    
+  #date{
+    font-size: 4vw;
+  }
+}

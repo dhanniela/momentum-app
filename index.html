@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"">
+  <title>Momentum App</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="main">
+    <div>
+      <span id="date"></span>
+    </div>
+    <div>
+      <span id="time"></span>
+    </div>
+    <h1 class="greetingContainer">
+      <span id="greeting"></span>
+      <span id="name">[USER]</span>
+    </h1>
+    <h2 class="focusContainer">
+      <span id="focusQuestion">What is your main focus for today?</span>
+      <input type="text" id="focus">
+    </h2>
+    <div class="footer">
+      <div class="space"></div>
+      <div class="quote-container">
+        <span id="quote"></span>
+      </div>
+      <button id="todoBtn">TODO</button>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="todo">
+            <input type="text" id="todoInput" placeholder="New Task">
+          </div>
+          <div>
+            <ul id="listContainer">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
